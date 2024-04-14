@@ -1,0 +1,53 @@
+---
+docType: "Chapter"
+chapterTitle: "KEDA Overview"
+description: "Autoscaling in Kubernetes with a focus on KEDA, teaching its architecture, operation, and the use of scalers. You’ll also learn how to deploy and manage KEDA."
+videos: 4
+lectures: 12
+order: 1
+---
+
+import { ChapterStyle } from "../../../../src/components/Learn-Components/Chapters-Style/chapters.style.js";
+import InstallIstio from "../../../../src/assets/images/learn-layer5/istio/install-istio.webp";
+import IstioAdapter from "../../../../src/assets/images/learn-layer5/istio/istio-adapter.webp";
+
+<ChapterStyle>
+
+<h2 class="chapter-sub-heading">What is KEDA?</h2>
+
+In the constantly changing field of cloud native applications, scalability is a major concern. Kubernetes, as a leading container orchestration platform, addresses many challenges but may require additional tools for efficient and automated scaling based on events. This is where Kubernetes Event-Driven Autoscaling (KEDA) emerges as a pivotal solution.
+
+KEDA is an open source project designed to extend Kubernetes, empowering developers to scale their applications seamlessly in response to varying workloads triggered by events. These events could range from changes in message queue depths to incoming HTTP requests to custom-defined metrics. KEDA acts as a bridge between Kubernetes and event sources, allowing for autoscaling of containerized workloads.
+
+KEDA's vendor-agnostic nature empowers developers regardless of their cloud provider choice. The flexibility makes it an attractive option for developers building event-driven applications in cloud environments. By integrating KEDA into their applications, developers can ensure optimal resource utilization, cost efficiency, and responsiveness to real-time demands.
+
+But before we dive further into KEDA and its features, let's take a step back and understand the need for autoscaling and what options we have in Kubernetes to scale our workloads.
+
+
+<h2 class="chapter-sub-heading">What Is Autoscaling?</h2>
+
+Autoscaling in general refers to the capability of a system to automatically adjust its resources, such as computing power, storage, or network bandwidth, based on the current workload or demand. This concept is particularly important in cloud computing and cloud native systems where workloads can vary significantly over time. Autoscaling is a fundamental concept in computer science that plays a crucial role in building flexible, efficient, and resilient systems capable of adapting to changing demands and ensuring optimal performance and cost-effectiveness.
+
+Autoscaling in Kubernetes extends this automation to dynamically adjust the number of running instances (pods) based on resource usage and other metrics.
+
+
+<h2 class="chapter-sub-heading">Horizontal Pod Autoscaling (HPA)</h2>
+
+Horizontal Pod Autoscaler (HPA), a Kubernetes API resource and a controller belonging to API version autoscaling/v2, automatically updates a workload resource such as a Deployment or StatefulSet, with the aim of automatically scaling the workload to match demand.
+
+Horizontal scaling involves deploying more Pods to respond to increased load. If the load decreases and the number of Pods is above the configured minimum, the HorizontalPodAutoscaler instructs the workload resource, the Deployment, StatefulSet, or other similar resource, to scale back down.
+
+The Horizontal Pod Autoscaling controller, running within the Kubernetes control plane, periodically adjusts the desired scale of its target (either up or down) to match observed metrics such as average CPU utilization, average memory utilization, or any other custom metric you specify.
+
+<h2 class="chapter-sub-heading">KEDA Overview</h2>
+
+This chapter provides a comprehensive exploration of the key components of KEDA, and how they work together to provide the scaling functionality that KEDA is used for.
+
+By the end of this chapter, you should be able to:
+
+- Discuss the architecture of KEDA.
+- Examine the key components of KEDA and its custom resources (CRDs).
+- Deploy KEDA using Helm.
+
+</ChapterStyle>
+

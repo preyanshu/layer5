@@ -123,7 +123,7 @@ const CourseOverview = ({ course, chapters, serviceMeshesList }) => {
           </Col>
           <Col md={12} lg={4} xl={5}>
             <div className="service-meshes-you-can-learn">
-              <h2>Service Meshes You can Learn</h2>
+              <h2>Technologies You Will Learn</h2>
               <ServiceMeshesAvailable
                 serviceMeshes={getAvailableServiceMeshes()}
               />

@@ -1,0 +1,55 @@
+---
+docType: "Chapter"
+chapterTitle: "Fundamentals of Scalers"
+description: "In the dynamic world of Kubernetes, resource utilization constantly fluctuates. KEDA scalers help your applications run smoothly while saving resources."
+videos: 4
+lectures: 12
+order: 3
+---
+
+import { ChapterStyle } from "../../../../src/components/Learn-Components/Chapters-Style/chapters.style.js";
+import InstallIstio from "../../../../src/assets/images/learn-layer5/istio/install-istio.webp";
+import IstioAdapter from "../../../../src/assets/images/learn-layer5/istio/istio-adapter.webp";
+
+<ChapterStyle>
+
+<h2 class="chapter-sub-heading">What Are Scalers?</h2>
+
+
+In the dynamic world of Kubernetes, resource utilization constantly fluctuates. KEDA scalers help your applications run smoothly while saving resources. These intelligent components act as event-driven autoscaling mechanisms, reacting to external signals and instructing your deployments to scale up or down accordingly.
+
+Think of them as watchful guards, constantly monitoring the environment and triggering scaling actions based on predefined rules. Let's take a closer look at how they work.
+
+
+<h2 class="chapter-sub-heading">What Do KEDA Scalers Do?</h2>
+
+
+KEDA scalers provide several advantages compared to traditional autoscalers. Instead of relying on internal metrics, KEDA responds to external events. KEDA scalers offer a more responsive and adaptable approach to dynamic environments.
+
+Select "Expand" to read more about the benefits of KEDA scalers.
+
+Advantages of KEDA Scalers
+
+<h3>1. React to external events</h3>
+
+Unlike traditional resource-based autoscalers, KEDA scalers rely on external "events" (think of them as signals from different sources) to trigger adjustments. These events can come from various sources like message queues, databases, monitoring systems, or even custom services.
+
+<h3>Drive dynamic scaling</h3>
+
+Based on the event data, KEDA scalers determine the appropriate scaling action. This can involve increasing or decreasing the number of replicas within your deployment, adjusting container resource limits, or even pausing deployments when demand decreases.
+
+<h3>Offer customizable scaling strategies</h3>
+
+You have full control over how your applications respond to events. KEDA scalers allow you to define thresholds, scaling rules, and even time windows for triggering actions, ensuring precise and adaptable responses.
+
+
+Here are a few examples of KEDA scalers in action:
+
+- Scaling a web server based on HTTP traffic: Imagine a KEDA scaler monitoring incoming HTTP requests. When traffic surges, the scaler automatically increases the number of server replicas to handle the load.
+
+- Processing a backlog of jobs with KEDA and Kafka: A scaler connected to a Kafka queue can trigger scaling of a worker application based on the number of pending messages, ensuring efficient job processing.
+
+- Adjusting database resources based on query load: A KEDA scaler monitoring database metrics can dynamically allocate resources to your database instance as query volume increases, preventing performance degradation.
+
+</ChapterStyle>
+
